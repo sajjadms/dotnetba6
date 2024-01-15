@@ -36,12 +36,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Academy/HospitalApp/WebApp/Views/Clinic/ClinicsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljXENsaW5pY3NMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Academy/HospitalApp/WebApp/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Academy/HospitalApp/WebApp/Views/Login/Logon.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9nb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Academy/HospitalApp/WebApp/Views/Patient/AddPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxBZGRQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Academy/HospitalApp/WebApp/Views/Patient/PatientsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxQYXRpZW50c0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Academy/HospitalApp/WebApp/Pages/Shared/_Layout.cshtml]
