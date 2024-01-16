@@ -17,7 +17,25 @@ namespace WebApp
         [HttpPost]
         public ActionResult SavePatient()
         {
-            return RedirectToAction("GetPatients");
+            // code related to saving patient 
+
+            return RedirectToAction("PatientDetail");
+        }
+
+        public ActionResult PatientDetail()
+        {
+            return View();
+        }
+
+        public ActionResult EditPatient()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UpdatePatient()
+        {
+            return RedirectToAction("PatientDetail");
         }
     }
 }

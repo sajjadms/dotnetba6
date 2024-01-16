@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0OGERouCyvT+p6vnrPBCORKFxDhYLJ2/ieMw3pg8YaQ=",
+  "Hash": "bTsLqRoXFJAkRU7ysWrBvtaR19si2eOC9wadDRYdtvk=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\css\\Login.zip"
     },
     {
+      "Identity": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\css\\patient\\patientdetail.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/patient/patientdetail.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\patient\\patientdetail.css"
+    },
+    {
       "Identity": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\css\\site.css",
       "SourceId": "WebApp",
       "SourceType": "Discovered",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\img\\PF.png",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "img/PF.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\PF.png"
     },
     {
       "Identity": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\js\\site.js",

@@ -13,12 +13,20 @@
       "PackagePath": "staticwebassets\\css\\Login.zip"
     },
     {
+      "Id": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\css\\patient\\patientdetail.css",
+      "PackagePath": "staticwebassets\\css\\patient\\patientdetail.css"
+    },
+    {
       "Id": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\img\\PF.png",
+      "PackagePath": "staticwebassets\\img\\PF.png"
     },
     {
       "Id": "C:\\Academy\\HospitalApp\\WebApp\\wwwroot\\js\\site.js",

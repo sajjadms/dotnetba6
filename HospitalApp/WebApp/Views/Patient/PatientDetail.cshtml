@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<link href="~/css/patient/patientdetail.css" rel="stylesheet" />
+
+<div class="row">
+
+    <div class="patient_container">
+        <h1>Patient Profile
+            <span style="float:right;">
+                <a href="@Url.Action("GetPatients","Patient")" class="f20">Back</a> 
+                <a href="@Url.Action("EditPatient","Patient")" class="f20">Edit</a>
+            </span>
+        </h1>
+
+        <div class="profile-section">
+            <div class="profile-picture">
+                <img src="~/img/pf.png" alt="Profile Picture">
+            </div>
+            <div class="patient-details">
+                <div class="details-label">Name:</div>
+                <div class="details-value">John Doe</div>
+                <div class="details-label">Age:</div>
+                <div class="details-value">30</div>
+                <div class="details-label">Gender:</div>
+                <div class="details-value">Male</div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="medical-history">
+            <h2>Medical History</h2>
+            <div class="history-item">
+                <span>Date:</span>
+                <span>2024-01-16</span>
+                <p>Details about the medical event or history item.</p>
+            </div>
+            <!-- Add more history items as needed -->
+        </div>
+
+    </div>
+
+</div>
