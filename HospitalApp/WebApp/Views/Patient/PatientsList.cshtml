@@ -1,4 +1,7 @@
-﻿@{
+﻿@using WebApp.Models
+@model IList<PatientModel>
+
+@{
     Layout = "_Layout";
 }
 
@@ -11,41 +14,30 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">FullName</th>
+                <th scope="col">Adhar No</th>
                 <th scope="col">Mobile No</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">Age(Years)</th>
+                <th scope="col">Address</th>
+                <th scope="col">Active</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td></td>
-                <td>
-                    <a href="@Url.Action("PatientDetail","Patient")">View</a>
-                    </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td></td>
-                <td>
-                    <a href="@Url.Action("PatientDetail","Patient")">View</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td></td>
-                <td>
-                    <a href="@Url.Action("PatientDetail","Patient")">View</a>
-                </td>
-            </tr>
+            @foreach(PatientModel patient in Model)
+            {
+                <tr>
+                    <td>@patient.FullName</td>
+                    <td>@patient.AdharNo</td>
+                    <td>@patient.MobileNo</td>
+                    <td>@patient.DateOfBirth.ToString("dd/MM/yyyy")</td>
+                    <td>@patient.AgeInYears()</td>
+                    <td>@patient.Address</td>
+                    <td>@patient.IsActive</td>
+                    <td><a href="@Url.Action("PatientDetail","Patient")">View</a></td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>

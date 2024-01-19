@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp.Models;
+using WebApp.ServiceLayer;
 
 namespace WebApp
 {
@@ -6,7 +8,12 @@ namespace WebApp
     {
         public IActionResult GetPatients()
         {
-            return View("PatientsList");
+            //Creating an object of PatientService
+            PatientService patientService = new PatientService();
+
+            IList<PatientModel> patientsData = patientService.GetPatients();
+
+            return View("PatientsList", patientsData);
         }
 
         public ActionResult AddPatient()
