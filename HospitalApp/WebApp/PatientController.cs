@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp.Entities;
 using WebApp.Models;
 using WebApp.ServiceLayer;
 
@@ -11,7 +12,7 @@ namespace WebApp
             //Creating an object of PatientService
             PatientService patientService = new PatientService();
 
-            IList<PatientModel> patientsData = patientService.GetPatients();
+            IList<Patient> patientsData = patientService.GetPatients();
 
             return View("PatientsList", patientsData);
         }

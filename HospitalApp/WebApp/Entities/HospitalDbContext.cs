@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+
+namespace WebApp.Entities;
+
+public partial class HospitalDbContext : DbContext
+{
+    public HospitalDbContext()
+    {
+    }
+
+    public HospitalDbContext(DbContextOptions<HospitalDbContext> options)
+        : base(options)
+    {
+    }
+
+    public virtual DbSet<Patient> Patients { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=SAJJADKHAN;Initial Catalog=HospitalDB;User ID=sa;password=sa@2022;TrustServerCertificate=True;");
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Patient>(entity =>
+        {
+            entity.HasKey(e => e.PatientId).HasName("PK__Patients__970EC3467586A31D");
+
+            entity.HasIndex(e => e.AdharNo, "UQ__Patients__11C1127FCD4E32E3").IsUnique();
+
+            entity.Property(e => e.PatientId).HasColumnName("PatientID");
+            entity.Property(e => e.AdharNo).HasMaxLength(20);
+            entity.Property(e => e.BloodGroup).HasMaxLength(10);
+            entity.Property(e => e.DateOfBirth).HasColumnType("datetime");
+            entity.Property(e => e.Gender)
+                .HasMaxLength(1)
+                .IsUnicode(false)
+                .IsFixedLength();
+            entity.Property(e => e.IsActive).HasDefaultValueSql("((1))");
+            entity.Property(e => e.MobileNo).HasMaxLength(100);
+            entity.Property(e => e.Nationality).HasMaxLength(100);
+            entity.Property(e => e.PatientName).HasMaxLength(100);
+        });
+
+        OnModelCreatingPartial(modelBuilder);
+    }
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+}

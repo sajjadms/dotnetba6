@@ -1,5 +1,5 @@
-﻿@using WebApp.Models
-@model IList<PatientModel>
+﻿@using WebApp.Entities
+@model IList<Patient>
 
 @{
     Layout = "_Layout";
@@ -18,22 +18,23 @@
                 <th scope="col">Adhar No</th>
                 <th scope="col">Mobile No</th>
                 <th scope="col">Date Of Birth</th>
-                <th scope="col">Age(Years)</th>
-                <th scope="col">Address</th>
+                <th scope="col">Gender</th>
                 <th scope="col">Active</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            @foreach(PatientModel patient in Model)
+            @foreach(Patient patient in Model)
             {
                 <tr>
-                    <td>@patient.FullName</td>
+                    <td>@patient.PatientName</td>
                     <td>@patient.AdharNo</td>
                     <td>@patient.MobileNo</td>
-                    <td>@patient.DateOfBirth.ToString("dd/MM/yyyy")</td>
-                    <td>@patient.AgeInYears()</td>
-                    <td>@patient.Address</td>
+                    <td>@if(patient.DateOfBirth != null)
+                        @patient.DateOfBirth.Value.ToString("dd/MM/yyyy")
+                    }
+                        </td>
+                    <td>@patient.Gender</td>
                     <td>@patient.IsActive</td>
                     <td><a href="@Url.Action("PatientDetail","Patient")">View</a></td>
                 </tr>
