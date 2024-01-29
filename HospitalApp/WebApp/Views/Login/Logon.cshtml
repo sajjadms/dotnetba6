@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using WebApp.Models
+@model LoginModel
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,18 +14,29 @@
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
 
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form class="login-form" action="/Login/SubmitLogin" method="post">
+        <form class="login-form" asp-action="SubmitLogin" asp-controller="Login" method="post">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+
+                @* <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required> *@
+
+                <label asp-for="Email"></label>
+                <input asp-for="Email" />
+
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                @* <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required> *@
+                <label asp-for="Password"></label>
+                <input asp-for="Password" />
+
             </div>
             <div class="form-group">
                 <button type="submit">Login</button>
