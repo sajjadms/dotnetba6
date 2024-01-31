@@ -24,18 +24,16 @@
         <form class="login-form" asp-action="SubmitLogin" asp-controller="Login" method="post">
             <div class="form-group">
 
-                @* <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required> *@
-
                 <label asp-for="Email"></label>
                 <input asp-for="Email" />
+                <span asp-validation-for="Email" class="validation-message"></span>
 
             </div>
             <div class="form-group">
-                @* <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required> *@
+
                 <label asp-for="Password"></label>
                 <input asp-for="Password" />
+                <span asp-validation-for="Password" class="validation-message"></span>
 
             </div>
             <div class="form-group">

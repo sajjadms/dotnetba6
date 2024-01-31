@@ -23,9 +23,24 @@ namespace WebApp
         }
 
         [HttpPost]
-        public ActionResult SavePatient()
+        public ActionResult SavePatient(PatientModel patientData)
         {
-            // code related to saving patient 
+
+            Patient patient = new Patient
+            {
+                PatientName = patientData.FullName,
+                AdharNo = patientData.AdharNo,
+                BloodGroup = patientData.BloodGroup,
+                DateOfBirth = patientData.DateOfBirth,
+                Gender = patientData.Gender,
+                IsActive = patientData.IsActive,
+                MobileNo = patientData.MobileNo,
+                Nationality = patientData.Nationality
+            };
+
+            PatientService patientService = new PatientService();
+
+            patientService.SavePatient(patient);
 
             return RedirectToAction("PatientDetail");
         }

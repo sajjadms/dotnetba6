@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.validation-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
