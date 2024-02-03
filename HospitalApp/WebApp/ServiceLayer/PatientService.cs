@@ -16,13 +16,31 @@ namespace WebApp.ServiceLayer
             return patients;
         }
 
-        public void SavePatient(Patient patient)
+        public Patient SavePatient(Patient patient)
         {
             HospitalDbContext dbContext = new HospitalDbContext();
 
-            dbContext.Patients.Add(patient);// adding an object to Save/Insert Patient into the DB
+            if(patient.PatientId == 0)
+            {
+                dbContext.Patients.Add(patient);//i am adding new patient 
+            }
+            else
+            {
+                dbContext.Patients.Update(patient);    // i am updating the patient
+            }
 
-            dbContext.SaveChanges();
+            dbContext.SaveChanges();   // EF will bring the latest added Patient Id
+
+            return patient;
+        }
+
+        public Patient GetPatientById(int patientId)
+        {
+            HospitalDbContext dbContext = new HospitalDbContext();
+
+            Patient patient = dbContext.Patients.FirstOrDefault(p=>p.PatientId == patientId);
+
+            return patient;
         }
     }
 }

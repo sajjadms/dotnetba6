@@ -36,7 +36,7 @@
                         </td>
                     <td>@patient.Gender</td>
                     <td>@patient.IsActive</td>
-                    <td><a href="@Url.Action("PatientDetail","Patient")">View</a></td>
+                        <td><a href="@Url.Action("PatientDetail","Patient",new{patientId=patient.PatientId})">View</a></td>
                 </tr>
             }
         </tbody>

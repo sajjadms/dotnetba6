@@ -1,4 +1,9 @@
-﻿@{
+﻿@using WebApp.Models;
+@model PatientModel
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
     Layout = "_Layout";
 }
 
@@ -7,47 +12,55 @@
         margin-top: 20px;
     }
 </style>
-
 <div class="row">
 
     <h1>Edit Patient</h1>
-    <form action="/Patient/UpdatePatient" method="post">
+
+    <form asp-action="UpdatePatient" asp-controller="Patient" method="post">
 
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="PatientName">Name</label>
-                <input type="text" class="form-control" id="PatientName" placeholder="Enter Name" value="John">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="MobileNo">Mobile No</label>
-                <input type="text" class="form-control" id="MobileNo" placeholder="Enter Mobile No" value="+91 1231123">
-            </div>
-        </div>
-        <div class="form-group col-md-6">
-            <label for="Gender">Gender</label>
-            <select class="form-control" id="Gender">
-                <option>Choose...</option>
-                <option selected value="1">Male</option>
-                <option value="2">Female</option>
-            </select>
-        </div>
-        <div class="form-group col-md-6">
-            <label for="inputAddress">Address</label>
-            <textarea class="form-control" id="inputAddress" placeholder="Enter Address">
 
+            <input asp-for="PatientId" />
+
+            <div class="form-group col-md-6">
+                <label asp-for="FullName"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="validation-message"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="MobileNo"></label>
+                <input asp-for="MobileNo" class="form-control" />
+                <span asp-validation-for="MobileNo" class="validation-message"></span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Gender"></label>
+            <input asp-for="Gender" class="form-control" />
+            <span asp-validation-for="Gender" class="validation-message"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Address"></label>
+            <textarea class="form-control" asp-for="Address">
             </textarea>
+            <span asp-validation-for="Address" class="validation-message"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="DateOfBirth"></label>
+            <input class="form-control" asp-for="DateOfBirth" />
+            <span asp-validation-for="DateOfBirth" class="validation-message"></span>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" value="KURNOOL">
+                <label asp-for="AdharNo"></label>
+                <input asp-for="AdharNo" class="form-control" />
+                <span asp-validation-for="AdharNo" class="validation-message"></span>
             </div>
             <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
+                <label>
+                    <input asp-for="IsActive" />
+                    <label asp-for="IsActive"></label>
+                </label>
+
             </div>
         </div>
 

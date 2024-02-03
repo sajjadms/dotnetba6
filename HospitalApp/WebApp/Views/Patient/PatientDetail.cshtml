@@ -1,4 +1,7 @@
-﻿@{
+﻿@using WebApp.Entities;
+@model Patient
+
+@{
     Layout = "_Layout";
 }
 
@@ -10,7 +13,7 @@
         <h1>Patient Profile
             <span style="float:right;">
                 <a href="@Url.Action("GetPatients","Patient")" class="f20">Back</a> 
-                <a href="@Url.Action("EditPatient","Patient")" class="f20">Edit</a>
+                <a href="@Url.Action("EditPatient","Patient",new{patientId=Model.PatientId})" class="f20">Edit</a>
             </span>
         </h1>
 
@@ -20,11 +23,28 @@
             </div>
             <div class="patient-details">
                 <div class="details-label">Name:</div>
-                <div class="details-value">John Doe</div>
-                <div class="details-label">Age:</div>
-                <div class="details-value">30</div>
+                <div class="details-value">@Model.PatientName</div>
+                <div class="details-label">Date Of Birth:</div>
+                <div class="details-value">@Model.DateOfBirth.Value.ToString("dd/MM/yyyy")</div>
                 <div class="details-label">Gender:</div>
-                <div class="details-value">Male</div>
+                <div class="details-value">
+                    @if (Model.Gender.ToLower() == "m") 
+                    {
+                        <text>Male</text>
+                    }
+                    else if (Model.Gender.ToLower() == "f")
+                    {
+                        <text>Famela</text>
+                    }
+                    else
+                    {
+                        <text>Unknown</text>
+                    }
+                </div>
+                <div class="details-label">Adhar No:</div>
+                <div class="details-value">@Model.AdharNo</div>
+                <div class="details-label">Nationality:</div>
+                <div class="details-value">@Model.Nationality</div>
             </div>
         </div>
 

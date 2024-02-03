@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Models
 {
@@ -32,6 +33,9 @@ namespace WebApp.Models
         public string Nationality { get; set; }
 
         public bool IsActive { get; set; }
+
+        [HiddenInput]
+        public int PatientId { get; set; }
 
         public PatientModel()
         {
