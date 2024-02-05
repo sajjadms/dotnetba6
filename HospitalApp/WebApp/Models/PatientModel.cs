@@ -30,7 +30,8 @@ namespace WebApp.Models
 
         public string BloodGroup { get; set; }
 
-        public string Nationality { get; set; }
+        [Display(Name = "Nationality")]
+        public int? NationalityID { get; set; }
 
         public bool IsActive { get; set; }
 

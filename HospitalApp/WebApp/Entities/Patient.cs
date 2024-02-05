@@ -19,7 +19,11 @@ public partial class Patient
 
     public string? MobileNo { get; set; }
 
-    public string? Nationality { get; set; }
-
     public string? BloodGroup { get; set; }
+
+    public string? Address { get; set; }
+
+    public int? NationalityId { get; set; }
+
+    public virtual Nationality? Nationality { get; set; }
 }

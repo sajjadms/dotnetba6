@@ -35,7 +35,7 @@ namespace WebApp
                 Gender = patientData.Gender,
                 IsActive = patientData.IsActive,
                 MobileNo = patientData.MobileNo,
-                Nationality = patientData.Nationality
+                NationalityId = patientData.NationalityID
             };
 
             PatientService patientService = new PatientService();
@@ -74,7 +74,7 @@ namespace WebApp
                 Gender = patient.Gender,
                 IsActive = patient.IsActive.Value,
                 MobileNo = patient.MobileNo,
-                Nationality = patient.Nationality,
+                NationalityID = patient.NationalityId,
                 PatientId = patient.PatientId
             };
 
@@ -95,7 +95,7 @@ namespace WebApp
             patient.BloodGroup = patientData.BloodGroup;
             patient.Gender = patientData.Gender;
             patient.IsActive = patientData.IsActive;
-            patient.Nationality = patientData.Nationality;
+            patient.NationalityId = patientData.NationalityID;
 
             patientService.SavePatient(patient);
 
