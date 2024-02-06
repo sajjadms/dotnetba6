@@ -114,6 +114,10 @@ namespace WebApp
             CommonService commonService = new CommonService();
 
             IList<SelectListItem> nationalitiesSelectListItems = new List<SelectListItem>();
+            nationalitiesSelectListItems.Add(new SelectListItem
+            {
+                Text = "--Select--"
+            });
 
             IList<Nationality> nationalities = commonService.GetNationalities();
 

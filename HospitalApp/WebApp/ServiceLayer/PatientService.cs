@@ -1,4 +1,5 @@
-﻿using WebApp.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApp.Entities;
 using WebApp.Models;
 
 namespace WebApp.ServiceLayer
@@ -10,7 +11,8 @@ namespace WebApp.ServiceLayer
         {
             HospitalDbContext dbContext = new HospitalDbContext();
 
-            IList<Patient> patients = dbContext.Patients.ToList(); //fetching patients data from DB
+            IList<Patient> patients = 
+                dbContext.Patients.Include(x=>x.Nationality) .ToList(); //fetching patients data from DB
 
             //return patients data(which is list of object of type Patient Model Class)
             return patients;
@@ -38,7 +40,7 @@ namespace WebApp.ServiceLayer
         {
             HospitalDbContext dbContext = new HospitalDbContext();
 
-            Patient patient = dbContext.Patients.FirstOrDefault(p=>p.PatientId == patientId);
+            Patient patient = dbContext.Patients.Include(p=>p.Nationality).FirstOrDefault(p=>p.PatientId == patientId);
 
             return patient;
         }
