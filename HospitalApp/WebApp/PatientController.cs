@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApp.Entities;
 using WebApp.Models;
 using WebApp.ServiceLayer;
@@ -19,7 +20,11 @@ namespace WebApp
 
         public ActionResult AddPatient()
         {
-            return View();
+            var patientModel = new PatientModel();
+
+            patientModel.Nationalities = GetNationalities();
+
+            return View(patientModel);
         }
 
         [HttpPost]
@@ -78,6 +83,8 @@ namespace WebApp
                 PatientId = patient.PatientId
             };
 
+            model.Nationalities = GetNationalities();
+
             //render patient form
             return View(model);
         }
@@ -100,6 +107,28 @@ namespace WebApp
             patientService.SavePatient(patient);
 
             return RedirectToAction("PatientDetail", new { patientId = patient.PatientId});
+        }
+
+        private IList<SelectListItem> GetNationalities()
+        {
+            CommonService commonService = new CommonService();
+
+            IList<SelectListItem> nationalitiesSelectListItems = new List<SelectListItem>();
+
+            IList<Nationality> nationalities = commonService.GetNationalities();
+
+            foreach (var nationality in nationalities)
+            {
+                SelectListItem nationalityListItem = new SelectListItem
+                {
+                    Text = nationality.NationalityName,
+                    Value = nationality.NationalityId.ToString()
+                };
+
+                nationalitiesSelectListItems.Add(nationalityListItem);
+            }
+
+            return nationalitiesSelectListItems;
         }
     }
 }

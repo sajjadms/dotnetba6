@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Models
@@ -37,6 +38,8 @@ namespace WebApp.Models
 
         [HiddenInput]
         public int PatientId { get; set; }
+
+        public IList<SelectListItem> Nationalities { get; set; }
 
         public PatientModel()
         {
