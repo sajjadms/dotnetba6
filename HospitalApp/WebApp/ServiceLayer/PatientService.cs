@@ -6,13 +6,17 @@ namespace WebApp.ServiceLayer
 {
     public class PatientService
     {
+        HospitalDbContext _dbContext;
+
+        public PatientService()
+        {
+            _dbContext = new HospitalDbContext();
+        }
 
         public IList<Patient> GetPatients()
         {
-            HospitalDbContext dbContext = new HospitalDbContext();
-
-            IList<Patient> patients = 
-                dbContext.Patients.Include(x=>x.Nationality) .ToList(); //fetching patients data from DB
+            IList<Patient> patients =
+                _dbContext.Patients.Include(x=>x.Nationality) .ToList(); //fetching patients data from DB
 
             //return patients data(which is list of object of type Patient Model Class)
             return patients;
@@ -20,27 +24,23 @@ namespace WebApp.ServiceLayer
 
         public Patient SavePatient(Patient patient)
         {
-            HospitalDbContext dbContext = new HospitalDbContext();
-
             if(patient.PatientId == 0)
             {
-                dbContext.Patients.Add(patient);//i am adding new patient 
+                _dbContext.Patients.Add(patient);//i am adding new patient 
             }
             else
             {
-                dbContext.Patients.Update(patient);    // i am updating the patient
+                _dbContext.Patients.Update(patient);    // i am updating the patient
             }
 
-            dbContext.SaveChanges();   // EF will bring the latest added Patient Id
+            _dbContext.SaveChanges();   // EF will bring the latest added Patient Id
 
             return patient;
         }
 
         public Patient GetPatientById(int patientId)
         {
-            HospitalDbContext dbContext = new HospitalDbContext();
-
-            Patient patient = dbContext.Patients.Include(p=>p.Nationality).FirstOrDefault(p=>p.PatientId == patientId);
+            Patient patient = _dbContext.Patients.Include(p=>p.Nationality).FirstOrDefault(p=>p.PatientId == patientId);
 
             return patient;
         }

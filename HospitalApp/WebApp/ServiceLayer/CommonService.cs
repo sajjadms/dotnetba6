@@ -4,14 +4,15 @@ namespace WebApp.ServiceLayer
 {
     public class CommonService
     {
+        HospitalDbContext _dbContext;
 
-        public CommonService() { }
+        public CommonService() {
+            _dbContext = new HospitalDbContext();
+        }
 
         public IList<Nationality> GetNationalities()
         {
-            HospitalDbContext dbContext = new HospitalDbContext();
-
-            IList<Nationality> nationalities = dbContext.Nationalities.ToList();
+            IList<Nationality> nationalities = _dbContext.Nationalities.ToList();
 
             return nationalities;
         }

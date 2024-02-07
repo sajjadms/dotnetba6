@@ -8,12 +8,18 @@ namespace WebApp
 {
     public class PatientController : Controller
     {
+        private PatientService _patientService;
+        private CommonService _commonService;
+
+        public PatientController() {
+
+            _patientService = new PatientService();
+            _commonService = new CommonService();
+        }
+
         public IActionResult GetPatients()
         {
-            //Creating an object of PatientService
-            PatientService patientService = new PatientService();
-
-            IList<Patient> patientsData = patientService.GetPatients();
+            IList<Patient> patientsData = _patientService.GetPatients();
 
             return View("PatientsList", patientsData);
         }
@@ -43,9 +49,7 @@ namespace WebApp
                 NationalityId = patientData.NationalityID
             };
 
-            PatientService patientService = new PatientService();
-
-            patientService.SavePatient(patient);
+            _patientService.SavePatient(patient);
 
             //once new patient was added, new PatientID will be autoincremented
             // this newly incremented Patient value will be bindded to Patient.PatientID  by EF
@@ -55,19 +59,15 @@ namespace WebApp
 
         public ActionResult PatientDetail(int patientId)
         {
-            PatientService patientService = new PatientService();
-
-            Patient patient = patientService.GetPatientById(patientId);
+            Patient patient = _patientService.GetPatientById(patientId);
 
             return View(patient);
         }
 
         public ActionResult EditPatient(int patientId)
         {
-            PatientService patientService = new PatientService();
-
             //Fetch the patient data
-            Patient patient = patientService.GetPatientById(patientId);
+            Patient patient = _patientService.GetPatientById(patientId);
 
             // bind patient data to model
             PatientModel model = new PatientModel
@@ -92,9 +92,7 @@ namespace WebApp
         [HttpPost]
         public ActionResult UpdatePatient(PatientModel patientData)
         {
-            PatientService patientService = new PatientService();
-
-            Patient patient = patientService.GetPatientById(patientData.PatientId);
+            Patient patient = _patientService.GetPatientById(patientData.PatientId);
 
             patient.PatientName = patientData.FullName;
             patient.DateOfBirth = patientData.DateOfBirth;
@@ -104,22 +102,20 @@ namespace WebApp
             patient.IsActive = patientData.IsActive;
             patient.NationalityId = patientData.NationalityID;
 
-            patientService.SavePatient(patient);
+            _patientService.SavePatient(patient);
 
             return RedirectToAction("PatientDetail", new { patientId = patient.PatientId});
         }
 
         private IList<SelectListItem> GetNationalities()
         {
-            CommonService commonService = new CommonService();
-
             IList<SelectListItem> nationalitiesSelectListItems = new List<SelectListItem>();
             nationalitiesSelectListItems.Add(new SelectListItem
             {
                 Text = "--Select--"
             });
 
-            IList<Nationality> nationalities = commonService.GetNationalities();
+            IList<Nationality> nationalities = _commonService.GetNationalities();
 
             foreach (var nationality in nationalities)
             {
