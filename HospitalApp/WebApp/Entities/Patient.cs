@@ -25,5 +25,7 @@ public partial class Patient
 
     public int? NationalityId { get; set; }
 
+    public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+
     public virtual Nationality? Nationality { get; set; }
 }

@@ -1,0 +1,52 @@
+﻿@using WebApp.Models;
+@model BookAppointmentModel
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+}
+
+<style>
+    .form-group {
+        margin-top: 20px;
+    }
+</style>
+
+<div class="row">
+
+    <h1>New Booking</h1>
+
+    <form asp-action="CreateAppointment" asp-controller="Appointment" method="post">
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label asp-for="PatientID"></label>
+                <select asp-for="PatientID" asp-items="Model.Patients" class="form-control"></select>
+                <span asp-validation-for="PatientID" class="validation-message"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="DoctorID"></label>
+                <select asp-for="DoctorID" asp-items="Model.Doctors" class="form-control"></select>
+                <span asp-validation-for="DoctorID" class="validation-message"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="AppointmentDate"></label>
+                <input class="form-control" asp-for="AppointmentDate" />
+                <span asp-validation-for="AppointmentDate" class="validation-message"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="AppointmentStatus"></label>
+                <select id="AppointmentStatus" name="AppointmentStatus" class="form-control">
+                    <option value="">--Select--</option>
+                    <option value="1">Scheduled</option>
+                    <option value="2">Arrived</option>
+                </select>
+                <span asp-validation-for="AppointmentStatus" class="validation-message"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Book Appointment</button>
+    </form>
+</div>

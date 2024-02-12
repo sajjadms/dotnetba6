@@ -1,0 +1,43 @@
+﻿@using WebApp.Entities
+@model IList<Appointment>
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <h1>
+        Appointments List
+        <a href="@Url.Action("BookAppointment","Appointment")" style="float:right;" class="btn btn-primary">Book an Appointment</a>
+    </h1>
+
+</div>
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Patient</th>
+                <th scope="col">Clinic</th>
+                <th scope="col">Doctor</th>
+                <th scope="col">Appointment Date</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Appointment appointment in Model)
+            {
+                <tr>
+                    <td>@appointment.Patient.PatientName</td>
+                    <td>@appointment.Clinic.ClinicName</td>
+                    <td>@appointment.Doctor.DoctorName</td>
+                    <td>
+                        @appointment.AppointmentDate.ToString("dd/MM/yyyy hh:mm tt")
+                    </td>
+                    <td>@appointment.AppointmentStatus</td>
+                    <td><a href="">View</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

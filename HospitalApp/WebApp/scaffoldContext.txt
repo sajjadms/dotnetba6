@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext -Connection "Data Source=(local);Initial Catalog=HospitalDB;Integrated Security=True;TrustServerCertificate=True;" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Context HospitalDbContext
