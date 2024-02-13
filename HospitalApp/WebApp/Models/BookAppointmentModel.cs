@@ -16,6 +16,7 @@ namespace WebApp.Models
         [DataType(DataType.DateTime)]
         public DateTime AppointmentDate { get; set; }
 
+        [Required(ErrorMessage = "Select a status")]
         public int AppointmentStatus { get; set; }
 
 

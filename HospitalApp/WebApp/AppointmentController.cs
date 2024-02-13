@@ -21,7 +21,7 @@ namespace WebApp
 
         public IActionResult Dashboard()
         {
-            IList<Appointment> appointments = 
+            IList<Appointment> appointments =
                 _appointmentService.GetAppointments();
 
             return View(appointments);
@@ -40,7 +40,7 @@ namespace WebApp
             });
 
             IList<Doctor> doctors = _doctorService.GetDoctors();
-            foreach(Doctor doctor in doctors)
+            foreach (Doctor doctor in doctors)
             {
                 model.Doctors.Add(new SelectListItem
                 {
@@ -55,7 +55,7 @@ namespace WebApp
                 Text = "--Select--"
             });
             IList<Patient> patients = _patientService.GetPatients();
-            foreach(var patient in patients)
+            foreach (var patient in patients)
             {
                 model.Patients.Add(new SelectListItem
                 {
@@ -73,6 +73,24 @@ namespace WebApp
             _appointmentService.BookAppointment(model);
 
             return RedirectToAction("Dashboard");
+        }
+
+        public IActionResult ViewAppointment(int appointmentId)
+        {
+            Appointment appointment = _appointmentService.GetById(appointmentId);
+            return View(appointment);
+        }
+
+        public IActionResult CancelAppointment(int appointmentId)
+        {
+            _appointmentService.CancelAppointment(appointmentId);
+            return RedirectToAction("ViewAppointment", "Appointment", new { appointmentId = appointmentId });
+        }
+
+        public IActionResult CompleteAppointment(int appointmentId)
+        {
+            _appointmentService.CompleteAppointment(appointmentId);
+            return RedirectToAction("ViewAppointment", "Appointment", new { appointmentId = appointmentId });
         }
     }
 }
