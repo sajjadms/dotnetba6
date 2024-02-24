@@ -17,5 +17,5 @@ public partial class Doctor
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
-    public virtual Clinic? Clinic { get; set; }
+    public virtual Clinic Clinic { get; set; } = null!;
 }

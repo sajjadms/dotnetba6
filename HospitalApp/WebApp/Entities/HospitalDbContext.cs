@@ -27,6 +27,8 @@ public partial class HospitalDbContext : DbContext
 
     public virtual DbSet<Patient> Patients { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=HospitalDB;Integrated Security=True;TrustServerCertificate=True;");
@@ -94,6 +96,7 @@ public partial class HospitalDbContext : DbContext
 
             entity.HasOne(d => d.Clinic).WithMany(p => p.Doctors)
                 .HasForeignKey(d => d.ClinicId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Doctors__ClinicI__5070F446");
         });
 
@@ -132,6 +135,15 @@ public partial class HospitalDbContext : DbContext
             entity.HasOne(d => d.Nationality).WithMany(p => p.Patients)
                 .HasForeignKey(d => d.NationalityId)
                 .HasConstraintName("FK__Patients__Nation__3F466844");
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.ToTable("Users", "Core");
+
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+            entity.Property(e => e.Email).HasMaxLength(100);
+            entity.Property(e => e.Password).HasMaxLength(50);
         });
 
         OnModelCreatingPartial(modelBuilder);
