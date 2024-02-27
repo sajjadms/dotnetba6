@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Academy\\HospitalApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\servicelayer\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\servicelayer\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\views\\home\\_patientssection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\home\\_patientssection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\models\\dashboardmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\dashboardmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\servicelayer\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\servicelayer\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\models\\patientsectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\patientsectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\views\\home\\_appointmentssection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\home\\_appointmentssection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|c:\\academy\\hospitalapp\\webapp\\models\\appointmentsectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F173851-148D-4B5E-A0EB-1E028AFC1DFB}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\appointmentsectionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\ServiceLayer\\PatientService.cs",
+              "RelativeDocumentMoniker": "WebApp\\ServiceLayer\\PatientService.cs",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\ServiceLayer\\PatientService.cs",
+              "RelativeToolTip": "WebApp\\ServiceLayer\\PatientService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwC0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:45:40.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientSectionModel.cs",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\Models\\PatientSectionModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\PatientSectionModel.cs",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\Models\\PatientSectionModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\PatientSectionModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:45:21.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_PatientsSection.cshtml",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\Views\\Home\\_PatientsSection.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Home\\_PatientsSection.cshtml",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\Views\\Home\\_PatientsSection.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Home\\_PatientsSection.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T05:44:50.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AppointmentsSection.cshtml",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\Views\\Home\\_AppointmentsSection.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Home\\_AppointmentsSection.cshtml",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\Views\\Home\\_AppointmentsSection.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Home\\_AppointmentsSection.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T05:38:08.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T05:37:36.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardModel.cs",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\Models\\DashboardModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\DashboardModel.cs",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\Models\\DashboardModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\DashboardModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:35:58.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApp\\HomeController.cs",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\HomeController.cs",
+              "RelativeToolTip": "WebApp\\HomeController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAIwBQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:35:25.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppointmentSectionModel.cs",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\Models\\AppointmentSectionModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\AppointmentSectionModel.cs",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\Models\\AppointmentSectionModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\AppointmentSectionModel.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAIAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:32:10.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Academy\\HospitalApp\\WebApp\\ServiceLayer\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "WebApp\\ServiceLayer\\AppointmentService.cs",
+              "ToolTip": "C:\\Academy\\HospitalApp\\WebApp\\ServiceLayer\\AppointmentService.cs",
+              "RelativeToolTip": "WebApp\\ServiceLayer\\AppointmentService.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAIwG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:23:57.572Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

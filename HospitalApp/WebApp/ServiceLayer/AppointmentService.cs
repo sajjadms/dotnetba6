@@ -79,5 +79,31 @@ namespace WebApp.ServiceLayer
             _dbContext.SaveChanges();
         }
 
+        public AppointmentSectionModel GetAppointmentSection()
+        {
+            var model = new AppointmentSectionModel
+            {
+                TodayAppointments = TodayAppointmentsCount(),
+                UpcomingAppointments = UpcomingAppointmentsCount(),
+                CompletedAppointments = CompletedAppointmentsCount()
+            };
+
+            return model;
+        }
+
+        public int TodayAppointmentsCount()
+        {
+           return _dbContext.Appointments.Where(p=> p.AppointmentDate.Date ==  DateTime.Now.Date).Count();
+        }
+
+        public int UpcomingAppointmentsCount()
+        {
+            return _dbContext.Appointments.Where(p => p.AppointmentDate.Date > DateTime.Now.Date).Count();
+        }
+
+        public int CompletedAppointmentsCount()
+        {
+            return _dbContext.Appointments.Where(p => p.AppointmentStatus == (int)AppointmentStatusEnum.Completed).Count();
+        }
     }
 }

@@ -1,0 +1,12 @@
+﻿@using WebApp.Models
+@model AppointmentSectionModel
+
+<section id="appointments">
+    <h2>Appointments</h2>
+    <ul>
+        <li><strong>Today's Appointments:</strong> @Model.TodayAppointments</li>
+        <li><strong>Upcoming Appointments:</strong> @Model.UpcomingAppointments</li>
+        <li><strong>Completed Appointments:</strong> @Model.CompletedAppointments</li>
+    </ul>
+    <!-- Add more content as needed -->
+</section>

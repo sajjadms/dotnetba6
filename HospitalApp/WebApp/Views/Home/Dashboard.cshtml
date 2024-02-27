@@ -1,4 +1,9 @@
-﻿
+﻿@using WebApp.Models
+@model DashboardModel
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
 @{
     Layout = "_Layout";
 }
@@ -16,35 +21,7 @@
         padding: 20px;
     }
 
-    #doctors {
-        /* Add any styling for the entire Doctors Section here */
-    }
-
-    .doctor-card-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .doctor-card {
-        width: 23%; /* Adjust the width to leave some space for margins */
-        margin-bottom: 20px; /* Add margin between cards */
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-        .doctor-card img {
-            width: 100%;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
     /* Add any additional styling for doctor cards as needed */
-
-
-
 </style>
 
 <section id="overview">
@@ -53,66 +30,8 @@
     <!-- Add more content as needed -->
 </section>
 
-
-<section id="appointments">
-    <h2>Appointments</h2>
-    <ul>
-        <li><strong>Today's Appointments:</strong> 25</li>
-        <li><strong>Upcoming Appointments:</strong> 50</li>
-        <li><strong>Completed Appointments:</strong> 150</li>
-    </ul>
-    <!-- Add more content as needed -->
-</section>
-
-
-<section id="patients">
-    <h2>Patients</h2>
-    <ul>
-        <li><strong>Total Patients:</strong> 100</li>
-        <li><strong>Today New Patients:</strong> 5</li>
-    </ul>
-    <!-- Add more content as needed -->
-</section>
-
-
-<section id="doctors">
-    <h2>Doctors Section</h2>
-    <div class="doctor-card-container">
-        <div class="doctor-card">
-            <img src="doctor1.jpg" alt="Doctor Image">
-            <h3>Dr. Jane Smith</h3>
-            <p>Specialty: Cardiology</p>
-            <p>Availability: Mon-Fri, 9 AM - 5 PM</p>
-        </div>
-        <!-- Add more doctor cards or information as needed -->
-        <div class="doctor-card">
-            <img src="doctor2.jpg" alt="Doctor Image">
-            <h3>Dr. John Doe</h3>
-            <p>Specialty: Pediatrics</p>
-            <p>Availability: Mon-Fri, 10 AM - 6 PM</p>
-        </div>
-
-        <div class="doctor-card">
-            <img src="doctor2.jpg" alt="Doctor Image">
-            <h3>Dr. John Doe</h3>
-            <p>Specialty: Pediatrics</p>
-            <p>Availability: Mon-Fri, 10 AM - 6 PM</p>
-        </div>
-
-        <div class="doctor-card">
-            <img src="doctor2.jpg" alt="Doctor Image">
-            <h3>Dr. John Doe</h3>
-            <p>Specialty: Pediatrics</p>
-            <p>Availability: Mon-Fri, 10 AM - 6 PM</p>
-        </div>
-
-    </div>
-</section>
-
-<section id="images">
-    <h2>Images Section</h2>
-    <img src="hospital_image1.jpg" alt="Hospital Image 1">
-    <img src="hospital_image2.jpg" alt="Hospital Image 2">
-    <!-- Add more images or a gallery as needed -->
-</section>
+<partial name="_AppointmentsSection" model="@Model.AppointmentSection" />
+<partial name="_PatientsSection" model="@Model.PatientSection" />
+<partial name="_DoctorsSection" />
+<partial name="_ImagesSection" />
 

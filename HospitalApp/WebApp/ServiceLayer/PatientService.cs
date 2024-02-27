@@ -40,9 +40,21 @@ namespace WebApp.ServiceLayer
 
         public Patient GetPatientById(int patientId)
         {
-            Patient patient = _dbContext.Patients.Include(p=>p.Nationality).FirstOrDefault(p=>p.PatientId == patientId);
+            return _dbContext.Patients.Include(p=>p.Nationality).FirstOrDefault(p=>p.PatientId == patientId);
+        }
 
-            return patient;
+        public PatientSectionModel GetPatientSectionModel()
+        {
+            var model = new PatientSectionModel
+            {
+               TotalPatients = TotalPatientsCount()
+            };
+
+            return model;
+        }
+        public int TotalPatientsCount()
+        {
+            return _dbContext.Patients.Count();
         }
     }
 }
